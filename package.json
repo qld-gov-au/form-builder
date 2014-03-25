@@ -1,0 +1,30 @@
+{
+  "name": "form-builder",
+  "version": "0.0.0",
+  "description": "Form Builder allows you to quickly create form prototypes and wireframes without needing to know HTML.",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qld-gov-au/form-builder.git"
+  },
+  "keywords": [
+    "form-builder",
+    "form",
+    "builder",
+    "forms",
+    "awesome"
+  ],
+  "author": "Queensland Government",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/qld-gov-au/form-builder/issues"
+  },
+  "homepage": "https://github.com/qld-gov-au/form-builder",
+  "devDependencies": {
+    "grunt": "~0.4.4",
+    "grunt-contrib-jshint": "~0.9.2",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
