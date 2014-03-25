@@ -1,4 +1,5 @@
 [![devDependencies](https://david-dm.org/qld-gov-au/form-builder/dev-status.png)](https://david-dm.org/qld-gov-au/form-builder#info=devDependencies)
+[![Travis build status](https://travis-ci.org/qld-gov-au/form-builder.png?branch=master)](https://travis-ci.org/qld-gov-au/form-builder)
 
 # README
 
