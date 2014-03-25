@@ -14,22 +14,45 @@ module.exports = function( grunt ) {
 				src: [
 					'Gruntfile.js',
 					'package.json',
+					'test/.jshintrc',
 					'.jshintrc'
 				]
+			},
+			
+			test: {
+				options: { jshintrc: 'test/.jshintrc' },
+				src: [
+					'test/**/*.js'
+				]
+			}
+		},
+
+
+		casper: {
+			defaultForm: {
+				options: {
+					test: true,
+					concise: true,
+					// parallel: true
+				},
+				files: {
+					'build/casper/default-form.xml' : [ 'test/acceptance/default-form-test.js' ]
+				}
 			}
 		},
 
 
 		// QA and recompile while you work
 		watch: {
-			// https://github.com/gruntjs/grunt-contrib-watch/issues/35#issuecomment-18508836
-			options: { interval: 5007 },
-
 			gruntfile: {
 				files: '<%= jshint.gruntfile.src %>',
 				tasks: [ 'jshint:gruntfile' ]
-			}
+			},
 
+			test: {
+				files: 'test/**/*',
+				tasks: [ 'jshint:test', 'casper' ]
+			}
 		},
 	});
 
@@ -37,6 +60,7 @@ module.exports = function( grunt ) {
 	// These plugins provide necessary tasks
 	grunt.loadNpmTasks( 'grunt-contrib-jshint' );
 	grunt.loadNpmTasks( 'grunt-contrib-watch' );
+	grunt.loadNpmTasks( 'grunt-casper' );
 
 
 	// build targets
