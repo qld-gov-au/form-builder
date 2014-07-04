@@ -1,0 +1,257 @@
+/*!
+ * usetheforces
+ * @see http://usetheforces.googlecode.com/
+ * @license GNU GENERAL PUBLIC LICENSE Version 3 <http://www.gnu.org/licenses/gpl.html>
+ */
+
+/* legend reset */
+fieldset {
+        border: none;
+        margin: 0;
+        padding: 0;
+}
+legend {
+        margin: 0;
+        padding: 0;
+        white-space: normal;
+        width: 100%;
+        font-weight: bold;
+        color: inherit;
+        *color: #000;
+        *margin-left: -7px !important;
+        *margin-right: -7px !important;
+}
+legend > span {
+        display: block;
+}
+legend span {
+        *display: block;
+        *float: left;
+}
+legend span span {
+        *display: inline;
+        *float: none;
+}
+/* question labels */
+.xf-required {
+        border-bottom: none;
+        color: #F00;
+}
+.xf-label,
+.xf-hint {
+        display: block;
+}
+/* legend as label */
+.xf-group fieldset,
+.xf-select fieldset,
+.xf-select1 fieldset {
+        margin-top: 0;
+}
+.xf-group legend,
+.xf-select legend,
+.xf-select1 legend {
+        font-family: inherit;
+        font-weight: normal;
+        font-size: 1em;
+        margin-bottom: 0;
+}
+/* lists within forms: questions, actions, choices */
+.tf-sections,
+.ftw-questions,
+.xf-choices,
+.tf-submit {
+        list-style: none;
+        display: block;
+        padding: 0;
+        margin: 0;
+}
+/* horizontal layout for slot-in and gathered answer types */
+.ftw-gathered li,
+.ftw-slot-in li{
+        padding-left: 13.5em;
+}
+.ftw-slot-in dl,
+.ftw-gathered .tf-submit,
+.ftw-slot-in .tf-submit {
+        padding-left: 12em;
+}
+.ftw-gathered .xf-label,
+.ftw-slot-in .xf-label,
+.ftw-slot-in dt {
+        position: absolute;
+        left: 1.5em;
+        width: 10.5em;
+}
+.tt-citizen .ftw-gathered .xf-label,
+.tt-citizen .ftw-slot-in .xf-label,
+.ftw-slot-in dt {
+        text-align: right;
+}
+.ftw-gathered .ftw-questions li,
+.ftw-slot-in .ftw-questions li {
+        padding-left: 1.5em;
+}
+.ftw-gathered .ftw-questions .xf-label,
+.ftw-slot-in .ftw-questions .xf-label {
+        position: static;
+        width: auto;
+        text-align: left;
+}
+/* questions */
+.xf-group,
+.xf-input,
+.xf-secret,
+.xf-select,
+.xf-select1,
+.xf-textarea {
+        position: relative;
+        padding: .5em 1.5em;
+        margin: 0 0 .3em;
+        *zoom: 1;
+}
+/* sections */
+.tf-section {
+        padding-left: 1.5em;
+        *zoom: 1;
+}
+/* groups */
+.xf-group .ftw-questions {
+        position: relative;
+        margin: 0 -1.5em;
+}
+.xf-group .xf-appearance-compact {
+        *left: -1.5em; /* IE 6, IE7 */
+}
+.xf-appearance-compact .xf-input,
+.xf-appearance-compact .xf-secret,
+.xf-appearance-compact .xf-select,
+.xf-appearance-compact .xf-select1,
+.xf-appearance-compact .xf-textarea {
+        float: left;
+        padding-right: .5em;
+		padding-bottom: 0;
+		margin-bottom: 0;
+}
+.ftw-gathered .xf-group .ftw-questions,
+.ftw-slot-in .xf-group .ftw-questions {
+        margin-top: -.5em;
+        margin-bottom: -.5em;
+}
+/* markers */
+.ftw-questions .xf-required,
+.ftw-gathered .ftw-questions .xf-required,
+.ftw-slot-in .ftw-questions .xf-required {
+        position: absolute;
+        top: .5em;
+        left: 0;
+        width: 1.5em;
+        text-align: center;
+        z-index: 2;
+}
+.ftw-gathered .xf-required,
+.ftw-slot-in .xf-required{
+        left: 12em;
+}
+/* alerts */
+.xf-submit-error .xf-alert {
+        color: #F00;
+}
+/* output */
+.xf-output {
+        margin: 0 .5em;
+        font-style: italic;
+}
+/* choices - checkboxes/radio buttons */
+.xf-choices li {
+        display: block;
+        list-style: none;
+        margin: .3em 0;
+        padding: 0 0 0 20px;
+        position: relative;
+        *zoom: 1;
+}
+.xf-select input,
+.xf-select1 input {
+        position: absolute;
+        left: 0;
+        margin: 2px;
+        *margin: -2px 0;
+}
+.xf-select .xf-appearance-compact li,
+.xf-select1 .xf-appearance-compact li {
+        float: left;
+        margin-bottom: .3em;
+        margin-right: 1em;
+        width: 10em;
+}
+.xf-appearance-compact .tf-select-all {
+        clear: left;
+        border-top: 1px solid #333;
+        padding-top: .3em;
+}
+/* submit buttons */
+.tf-footer {
+        padding: 1.5em;
+        *zoom: 1;
+}
+.tf-submit li {
+        display: inline-block;
+        margin: 0 2em 0 0;
+        padding: 0;
+        *float: left;
+}
+.tf-form input[type='submit'] {
+        padding: .5em 1em;
+}
+strong input {
+        font-weight: bold;
+}
+.tf-form input {
+        _padding: expression(this.getAttribute('type')=='submit' ? '.5em 1em' : undefined);
+}
+/* data display */
+.tf-form dt {
+        font-weight: normal;
+        margin: 0;
+        padding: .5em 1.5em;
+}
+.tf-form dd {
+        margin: 0 1.5em 1em;
+        padding: .5em 1.5em;
+        min-height: 1.5em;
+        _height: 1.5em;
+        border-radius: 7px;
+        -moz-border-radius: 7px;
+        -webkit-border-radius: 7px;
+}
+
+
+
+
+
+/* status messages (default: info) */
+.tf-status {
+        color: #000;
+}
+.tf-status .inner {
+        background: #eef4f6 url(info.png) 12px 12px no-repeat;
+        margin: 0 0 .5em;
+        padding: .5em 1em .5em 54px;
+        border-radius: 13px;
+        -moz-border-radius: 13px;
+        -webkit-border-radius: 13px;
+}
+.tf-status .tf-success {
+        background: #f2f7ea url(success.png) 12px 12px no-repeat;
+}
+.tf-status .tf-alert {
+        background: #fff9ce url(alert.png) 12px 12px no-repeat;
+}
+.tf-status .tf-fail {
+        background: #fee6e8 url(fail.png) 12px 12px no-repeat;
+}
+.tf-status li {
+        margin: .5em 0;
+}
+
+/* end: forces.forms.css */

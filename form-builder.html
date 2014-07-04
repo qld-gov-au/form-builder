@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-AU" lang="en-AU">
+<!-- Build: @BUILD-LABEL@ -->
+<head>
+	<meta charset="UTF-8" />
+	<title>Form builder | QGov Online tools | Queensland Government</title>
+
+<!--#set var="franchise" value="toolbox"-->
+<!--#set var="title" value="Form builder"-->
+	<link rel="stylesheet" type="text/css" href="https://www.qld.gov.au/assets/v2/style/qgov.css" media="all" />
+	<!--[if lt IE 9]><link rel="stylesheet" href="/assets/v2/style/qgov-ie.css" type="text/css" media="all" /><![endif]-->
+	
+	<!-- layout-small is assumed by default (combined with qgov.css) -->
+	<link href="https://www.qld.gov.au/assets/v2/style/layout-medium.css" media="only all and (min-width: 640px) and (max-width: 980px)" rel="stylesheet" type="text/css" />
+	<link href="https://www.qld.gov.au/assets/v2/style/layout-large.css" media="only all and (min-width: 980px)" rel="stylesheet" type="text/css" />
+    
+	<meta name="viewport" content="width=device-width" />
+	
+	
+	<link rel="shortcut icon" href="https://www.qld.gov.au/assets/v2/images/skin/favicon.ico" />
+
+	<!-- Grab Google CDN's jQuery. Fall back to local copy if necessary --> 
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
+	<script type="text/javascript"><!-- //
+		!window.jQuery && document.write(unescape('%3Cscript src="/assets/v2/script/jquery-1.7.2.min.js"%3E%3C/script%3E'));
+	// --></script>
+    <script type="text/javascript" src="https://www.qld.gov.au/assets/v2/script/qgov-environment.js" id="qgov-environment"></script>
+	<!--[if lt IE 9]>
+	<script type="text/javascript">document.createElement('abbr');document.createElement('time');</script>
+	<script type="text/javascript" src="/assets/v2/script/ie-layout.js"></script>
+	<![endif]-->
+
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://www.qld.gov.au/assets/v2/images/skin/qg-coa-ogp.png" />
+
+
+	<link type="text/css" rel="stylesheet" href="form-builder.css" />
+	<link type="text/css" rel="stylesheet" href="wireframe/wireframe.css" />
+	<link type="text/css" rel="stylesheet" href="lib/frood.css" />
+
+	<meta name="description" content="A tool for mocking up forms" />
+	<meta name="keywords" content="forms, form builder, form design" />
+
+	<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+	<link rel="schema.AGLSTERMS" href="http://www.agls.gov.au/agls/terms/" />
+	
+	<meta name="DCTERMS.creator" scheme="AGLSTERMS.GOLD" content="c=AU; o=The State of Queensland; ou=Department of Public Works; ou=Smart Service Queensland" />
+	<meta name="DCTERMS.publisher" scheme="AGLSTERMS.AglsAgent" content="corporateName=The State of Queensland; jurisdiction=Queensland" />
+	<meta name="DCTERMS.created" content="2010-11-04" />
+	<meta name="DCTERMS.modified" content="2013-06-18" />
+	<meta name="DCTERMS.title" content="Form builder | QGov Online tools" />
+	<meta name="DCTERMS.description" content="A tool for mocking up forms" />
+    <meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content="https://www.qld.gov.au/assets/includes/global/head-meta-identifier.html" />
+	<meta name="DCTERMS.type" scheme="DCTERMS.DCMIType" content="Text" />
+	<meta name="AGLSTERMS.documentType" scheme="AGLSTERMS.agls-document" content="form" />
+	<meta name="DCTERMS.jurisdiction" scheme="AGLSTERMS.AglsJuri" content="Queensland" />
+	<meta name="DCTERMS.license" scheme="DCTERMS.URI" content="http://creativecommons.org/licenses/by/3.0/au/" />
+</head>
+
+<body id="qld-gov-au" class="lofi">
+
+<!-- noindex -->
+	<!--[if lt IE 9]><script type="text/javascript">jQuery && jQuery.transformer({addClasses:true});</script><![endif]-->
+	
+	<div id="access">
+		<h2>Skip links and keyboard navigation</h2>
+		<ul>
+			<li><a href="#content">Skip to content</a></li>
+			<!-- <li><a href="#nav-site">Skip to site navigation</a></li>
+			<li><a href="#footer">Skip to footer</a></li> -->
+			<li id="access-instructions"><a href="https://www.qld.gov.au/help/accessibility/keyboard.html#section-aria-keyboard-navigation">Use tab and cursor keys to move around the page (more information)</a></li>
+		</ul>
+	</div>
+
+	<div id="header-wrapper"><div id="header"><div id="header-bg"></div><div class="box-sizing"><div class="max-width">
+		<h2>Site header</h2>
+
+		<div id="qg-coa"><a href="https://www.qld.gov.au/">
+			<!--[if gte IE 7]><!--><img src="https://www.qld.gov.au/assets/v2/images/skin/qg-coa.png" width="287" height="50" alt="Queensland Government home" /><!--<![endif]-->
+			<!--[if lte IE 6]><img src="https://www.qld.gov.au/assets/v2/images/skin/qg-coa-ie6.png" width="287" height="50" alt="Queensland Government home" /><![endif]-->
+			<img src="https://www.qld.gov.au/assets/v2/images/skin/qg-coa-print.png" class="print-version" alt="" />
+		</a></div>
+
+		<ul id="tools">
+			<li class="nav-contact"><a accesskey="4" href="https://www.qld.gov.au/contact-us/">Contact us</a></li>
+			<li class="last-child" id="header-search">
+				<form action="http://pan.search.qld.gov.au/search/search.cgi" id="search-form">
+					<div>
+						<label for="search-query" class="visuallyhidden">Search website</label>
+						<input accesskey="5" type="search" name="query" id="search-query" size="27" value="" placeholder="Search website" />
+						<input id="search-button" type="image" src="https://www.qld.gov.au/assets/v2/images/skin/button-search.png" value="Search" />
+						<input type="hidden" name="num_ranks" value="10" />
+						<input type="hidden" name="tiers" value="off" />
+						<input type="hidden" name="collection" value="qld-gov" />
+						<input type="hidden" name="profile" value="qld" />
+					</div>
+				</form>
+			</li>
+		</ul>
+
+		<div id="nav-site"><ul>
+			<li class="nav-residents">
+				<a href="https://www.qld.gov.au/queenslanders/">For Queenslanders</a>
+			</li>
+			<li class="nav-business">
+				<a href="http://www.business.qld.gov.au/">Business and industry</a>
+			</li>
+			<!--<li class="nav-non-residents">
+				<a href="https://www.qld.gov.au/non-residents/">For non-residents</a>
+			</li>-->
+		</ul></div>
+
+	</div></div></div></div>
+<!-- endnoindex -->
+
+
+	<div id="page-container"><div class="max-width">
+		<div id="breadcrumbs">
+			<h2>You are here:</h2>
+			<ol>
+<li class="nav-home"><a href="https://www.qld.gov.au/">Queensland Government home</a></li>
+
+				<li><a href="/">QGov Online tools</a></li>
+				<li class="last-child">Form builder</li>
+			</ol>
+		</div>
+	
+		<div id="content-container">
+            <div id="content">
+
+				<div class="article constructiform"><div class="box-sizing"><div class="border">
+                
+					<h1>Form builder</h1>
+					
+
+					<div class="preamble instructions">
+						<p>Who is this form for? When should they use it? What is the authority behind it?</p>
+						<p>What will the person need? Any information that is not at hand? Do they need any reference documents? Credit cards? Identification numbers? e.g. ‘You will need your driver licence number’</p>
+						<p>It takes about 10 minutes to complete this form.</p>
+					</div>
+					
+<form action="./content-form.html" method="post" class="form">
+
+	<ol class="questions">
+
+		<li>
+			<label for="name">
+				<span class="label">Name</span>
+				<abbr title="(required)">*</abbr>
+			</label>
+			<input type="text" name="name" id="name" size="30" required="required" />
+		</li>
+
+		<li>
+			<label for="email">
+				<span class="label">Email</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint privacy">We will never share your email address</small>
+			</label>
+			<input type="email" name="email" id="email" size="40" required="required" />
+		</li>
+
+		<li>
+			<label for="comments2">
+				<span class="label">Comments</span>
+				<abbr title="(required)">*</abbr>
+			</label>
+			<textarea name="comments2" id="comments2" rows="10" cols="40" required="required"></textarea>
+		</li>
+
+		<li class="section">
+			<fieldset>
+				<legend><span class="h2">Contact details</span></legend>
+				<ol class="questions">
+					<li>
+						<label for="tel">
+							<span class="label">Phone</span>
+						</label>
+						<input type="tel" name="tel" id="tel" size="20" value="" />
+					</li>
+					<li class="atomic group">
+						<fieldset>
+							<legend>
+								<span class="label">Postal address</span>
+							</legend>
+							<ol class="questions">
+								<li>
+									<label for="streetaddress1">
+										<span class="label">Address line 1</span>
+										<abbr title="(required)">*</abbr>
+									</label>
+									<input type="text" name="streetaddress1" id="streetaddress1" size="20" value="" required="required" />
+								</li>
+								<li>
+									<label for="streetaddress2">
+										<span class="label">Address line 2</span>
+									</label>
+									<input type="text" name="streetaddress2" id="streetaddress2" size="20" value="" />
+								</li>
+								<li>
+									<label for="streetaddress3">
+										<span class="label">Address line 3</span>
+									</label>
+									<input type="text" name="streetaddress3" id="streetaddress3" size="20" value="" />
+								</li>
+								<li class="group">
+									<ol class="questions compact">
+										<li>
+											<label for="town">
+												<span class="label">Town, city or suburb</span>
+												<abbr title="(required)">*</abbr>
+											</label>
+											<input type="text" name="town" id="town" size="20" value="" required="required" />
+										</li>
+										<li>
+											<label for="state">
+												<span class="label">State</span>
+												<abbr title="(required)">*</abbr>
+											</label>
+											<input type="text" name="state" id="state" size="5" value="QLD" required="required" />
+										</li>
+										<li>
+											<label for="postcode">
+												<span class="label">Postcode</span>
+												<abbr title="(required)">*</abbr>
+											</label>
+											<input type="text" name="postcode" id="postcode" size="5" value="" required="required" />
+										</li>
+									</ol>
+								</li>
+								<li>
+									<label for="country">
+										<span class="label">Country</span>
+										<abbr title="(required)">*</abbr>
+									</label>
+									<input type="text" name="country" id="country" size="20" value="Australia" required="required" />
+								</li>
+							</ol>
+						</fieldset>
+					</li>
+				</ol>
+			</fieldset>
+		</li>
+
+		<li>
+			<fieldset>
+				<legend>
+					<span class="label">Is the next section relevant?</span>
+				</legend>
+				<ul class="choices">
+					<ul class="choices compact">
+						<li><input type="radio" name="relevance-gate" value="Yes" id="relevance-gate-yes" required="required" /><label for="relevance-gate-yes">Yes</label></li>
+						<li><input type="radio" name="relevance-gate" value="No" id="relevance-gate-no" required="required" /><label for="relevance-gate-no">No</label></li>
+					</ul>
+				</ul>
+			</fieldset>
+		</li>
+
+		<li class="section">
+			<fieldset>
+				<legend>
+					<span class="h2">This section might be relevant</span>
+					<small class="relevance">(If you chose ‘Yes’ above)</small>
+				</legend>
+				<ol class="questions">
+
+					<li>
+						<label for="relevant-a">
+							<span class="label">Relevant A</span>
+							<abbr class="required" title="(required)">*</abbr>
+						</label>
+						<input id="relevant-a" name="relevant-a" size="30" required="required" type="text" />
+					</li>
+
+					<li>
+						<label for="also-relevant">
+							<span class="label">Also relevant</span>
+							<abbr class="required" title="(required)">*</abbr>
+						</label>
+						<input id="also-relevant" name="also-relevant" size="30" required="required" type="text" />
+					</li>
+
+				</ol>
+			</fieldset>
+		</li>
+
+		<li class="footer">
+			<div class="instructions">
+				<p>Any final instructions go here. What should the customer expect after submitting? Who will look at their response? Will they receive any notification when something happens? How long should they wait before following up through other channels? How do they follow up?</p>
+			</div>
+			<ul class="actions">
+				<li><strong><input type="submit" value="Send message" /></strong></li>
+			</ul>
+		</li>
+
+	</ol>
+
+</form>
+
+
+				</div></div></div><!-- end .article, .box-sizing, .border -->
+			</div><!-- end #content -->
+
+            <div id="asides"><div class="box-sizing"><div class="border">
+<!-- global aside -->
+
+	<form id="toggle">
+		<ul class="actions">
+			<li><button>preview</button></li>
+			<div id="editButtons">
+				<li><button id="export-html-btn">export html</button></li>
+				<li><button id="import-html-btn">import html</button></li>
+				<li><button id="new-form-btn">new form</button></li>
+				<li><button id="edit-text-or-drag-btn">select text</button></li>
+			</div>
+		</ul>
+	</form>
+
+<!-- 
+	<div class="status info">
+		<h2>Tips and tricks</h2>
+		<ol>
+			<li>Click labels and text to edit</li>
+			<li>Type '*' or 'r' in a box to toggle required on and off</li>
+			<li>Use up and down arrows to reorder questions</li>
+			<li>Click the '*' to make a question optional</li>
+		</ol>
+	</div>
+ -->
+
+<div id="toolbox" class="aside">
+	<h2>Toolbox</h2>
+	<ol class="questions">
+	
+		<li>
+			<label for="input20">
+				<span class="label">Text field</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Optional hint for the text field</small>
+			</label>
+			<input type="text" name="text1" id="input20" size="20" required="required" />
+		</li>
+	
+		<li>
+			<label for="input30">
+				<span class="label">Text field</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Optional hint for the text field</small>
+			</label>
+			<input type="text" name="text2" id="input30" size="30" required="required" />
+		</li>
+	
+		<li class="atomic group">
+			<fieldset>
+				<legend>
+					<span class="label">Name</span>
+				</legend>
+				<ol class="questions compact">
+					<li>
+						<label for="given-name">
+							<span class="label">Given name</span>
+							<abbr class="required" title="(required)">*</abbr>
+						</label>
+						<input id="given-name" name="given-name" size="15" required="required" type="text" />
+					</li>
+					<li>
+						<label for="family-name">
+							<span class="label">Family name</span>
+							<abbr class="required" title="(required)">*</abbr>
+						</label>
+						<input id="family-name" name="family-name" size="15" required="required" type="text" />
+					</li>
+				</ol>
+			</fieldset>
+		</li>
+
+		<li>
+			<label for="email">
+				<span class="label">Email</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Example: jane.smart@example.com</small>
+			</label>
+			<input type="email" name="email" id="email" size="40" required="required" />
+		</li>
+
+		<li>
+			<label for="phone">
+				<span class="label">Phone</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Home, mobile or work number</small>
+			</label>
+			<input type="tel" name="phone" id="phone" size="20" required="required" />
+		</li>
+
+		<li class="atomic group">
+			<fieldset>
+				<legend>
+					<span class="label">Address</span>
+				</legend>
+				<ol class="questions">
+					<li>
+						<label for="streetaddress1">
+							<span class="label">Address line 1</span>
+							<abbr title="(required)">*</abbr>
+						</label>
+						<input type="text" name="streetaddress1" id="streetaddress1" size="20" value="" required="required" />
+					</li>
+					<li>
+						<label for="streetaddress2">
+							<span class="label">Address line 2</span>
+						</label>
+						<input type="text" name="streetaddress2" id="streetaddress2" size="20" value="" />
+					</li>
+					<li>
+						<label for="streetaddress3">
+							<span class="label">Address line 3</span>
+						</label>
+						<input type="text" name="streetaddress3" id="streetaddress3" size="20" value="" />
+					</li>
+					<li class="group">
+						<ol class="questions compact">
+							<li>
+								<label for="town">
+									<span class="label">Town, city or suburb</span>
+									<abbr title="(required)">*</abbr>
+								</label>
+								<input type="text" name="town" id="town" size="20" value="" required="required" />
+							</li>
+							<li>
+								<label for="state">
+									<span class="label">State</span>
+									<abbr title="(required)">*</abbr>
+								</label>
+								<input type="text" name="state" id="state" size="5" value="QLD" required="required" />
+							</li>
+							<li>
+								<label for="postcode">
+									<span class="label">Postcode</span>
+									<abbr title="(required)">*</abbr>
+								</label>
+								<input type="text" name="postcode" id="postcode" size="5" value="" required="required" />
+							</li>
+						</ol>
+					</li>
+					<li>
+						<label for="country">
+							<span class="label">Country</span>
+							<abbr title="(required)">*</abbr>
+						</label>
+						<input type="text" name="country" id="country" size="20" value="Australia" required="required" />
+					</li>
+				</ol>
+			</fieldset>
+		</li>
+
+		<li>
+			<label for="date">
+				<span class="label">Date</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Example: 26/1/2013</small>
+			</label>
+			<input type="date" name="date" id="date" size="20" required="required" placeholder="d/mm/year" />
+		</li>
+
+		<li>
+			<label for="textarea2">
+				<span class="label">Textarea (2 rows)</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Optional hint for the text field</small>
+			</label>
+			<textarea id="textarea2" name="textarea1" rows="2" cols="40" required="required"></textarea>
+		</li>
+
+		<li>
+			<label for="textarea10">
+				<span class="label">Textarea (10 rows)</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Optional hint for the text field</small>
+			</label>
+			<textarea id="textarea10" name="textarea2" rows="10" cols="40" required="required"></textarea>
+		</li>
+
+		<li>
+			<input type="checkbox" name="a-single-checkbox" value="true" id="a-single-checkbox" />
+			<label for="a-single-checkbox">A single checkbox</label>
+		</li>
+
+		<li>
+			<input type="checkbox" name="i-agree-to-the-terms-and-conditions" value="true" id="i-agree-to-the-terms-and-conditions" required="required" />
+			<label for="i-agree-to-the-terms-and-conditions">I agree to the terms and conditions</label>
+		</li>
+
+		<li>
+			<fieldset id="name1">
+				<legend>
+					<span class="label">List of checkboxes</span>
+					<small class="hint">Select all that apply</small>
+				</legend>
+				<ul class="choices">
+					<li><input type="checkbox" name="name1" value="post" id="address1" /><label for="address1">post</label></li>
+					<li><input type="checkbox" name="name1" value="email" id="email2" /><label for="email2">email</label></li>
+					<li><input type="checkbox" name="name1" value="phone" id="phone1" /><label for="phone1">phone</label></li>
+				</ul>
+			</fieldset>
+		</li>
+		
+		<li>
+			<fieldset>
+				<legend>
+					<span class="label">Radio buttons (Yes/No)</span>
+					<abbr title="(required)">*</abbr>
+					<small class="hint">Hint text</small>
+				</legend>
+				<ul class="choices compact">
+					<li><input type="radio" name="binary" value="Yes" id="binary-yes" required="required" /><label for="binary-yes">Yes</label></li>
+					<li><input type="radio" name="binary" value="No" id="binary-no" required="required" /><label for="binary-no">No</label></li>
+				</ul>
+			</fieldset>
+		</li>
+		
+		<li>
+			<fieldset>
+				<legend>
+					<span class="label">Radio buttons</span>
+					<abbr title="(required)">*</abbr>
+					<small class="hint">Hint text</small>
+				</legend>
+				<ul class="choices">
+					<li><input type="radio" name="radio" value="red" id="radio-red" required="required" /><label for="radio-red">Red</label></li>
+					<li><input type="radio" name="radio" value="orange" id="radio-orange" required="required" /><label for="radio-orange">Orange</label></li>
+					<li><input type="radio" name="radio" value="yellow" id="radio-yellow" required="required" /><label for="radio-yellow">Yellow</label></li>
+					<li><input type="radio" name="radio" value="green" id="radio-green" required="required" /><label for="radio-green">Green</label></li>
+					<li><input type="radio" name="radio" value="blue" id="radio-blue" required="required" /><label for="radio-blue">Blue</label></li>
+					<li><input type="radio" name="radio" value="indigo" id="radio-indigo" required="required" /><label for="radio-indigo">Indigo</label></li>
+					<li><input type="radio" name="radio" value="violet" id="radio-violet" required="required" /><label for="radio-violet">Violet</label></li>
+				</ul>
+			</fieldset>
+		</li>
+
+		<li>
+			<label for="select">
+				<span class="label">Select list</span>
+				<abbr title="(required)">*</abbr>
+				<small class="hint">Hint text</small>
+			</label>
+			<select name="select" id="select">
+				<option value="">—please select—</option>
+				<option>Apple</option>
+				<option>Banana</option>
+				<option>Carrot</option>
+			</select>
+		</li>
+
+		<li class="atomic group">
+			<fieldset>
+				<legend>
+					<span class="label">Compact group</span>
+					<small class="hint">Hint for the group</small>
+				</legend>
+				<ol class="questions compact">
+					<li>
+						<label for="group-questionA">
+							<span class="label">Apple</span>
+							<abbr title="(required)">*</abbr>
+							<small class="hint">Hint?</small>
+						</label>
+						<input type="text" name="group-questionA" id="group-questionA" size="5" required="required" />
+					</li>
+					<li>
+						<label for="group-questionB">
+							<span class="label">Banana</span>
+							<abbr title="(required)">*</abbr>
+							<small class="hint">Hint?</small>
+						</label>
+						<input type="text" name="group-questionB" id="group-questionB" size="5" required="required" />
+					</li>
+					<li>
+						<label for="group-questionC">
+							<span class="label">Carrot</span>
+							<abbr title="(required)">*</abbr>
+							<small class="hint">Hint?</small>
+						</label>
+						<input type="text" name="group-questionC" id="group-questionC" size="5" required="required" />
+					</li>
+				</ol>
+			</fieldset>
+		</li>
+
+		<li class="section">
+			<fieldset>
+				<legend>
+					<span class="h2">Section</span>
+				</legend>
+				<ol class="questions">
+					<li>
+						<label for="section-input20">
+							<span class="label">Text field</span>
+							<abbr title="(required)">*</abbr>
+							<small class="hint">Optional hint for the text field</small>
+						</label>
+						<input type="text" name="section-text1" id="section-input20" size="20" required="required" />
+					</li>
+				</ol>
+			</fieldset>
+		</li>
+
+		<li class="section">
+			<fieldset>
+				<legend>
+					<span class="h2">Progressive disclosure</span>
+					<small class="hint relevance">(If you chose ‘Yes’ above)</small>
+				</legend>
+				<ol class="questions">
+					<li>
+						<label for="relevant-input20">
+							<span class="label">Text field</span>
+							<abbr title="(required)">*</abbr>
+							<small class="hint">Optional hint for the text field</small>
+						</label>
+						<input type="text" name="relevant-text1" id="relevant-input20" size="20" required="required" />
+					</li>
+				</ol>
+			</fieldset>
+		</li>
+
+		<li>
+			<fieldset>
+				<legend>
+					<span class="label">Progressive disclosure wizard</span>
+					<abbr title="(required)">*</abbr>
+					<small class="hint relevance">(If you chose ‘Yes’ above)</small>
+				</legend>
+				<ul class="choices compact">
+					<li><input type="radio" name="wizard" value="Yes" id="wizard-yes" required="required" /><label for="wizard-yes">Yes</label></li>
+					<li><input type="radio" name="wizard" value="No" id="wizard-no" required="required" /><label for="wizard-no">No</label></li>
+				</ul>
+			</fieldset>
+		</li>
+
+		<li>
+			<p>
+				<small class="hint relevance">(If you chose ‘No’ above)</small>
+			</p>
+			<div class="status info">
+				<h2>You are not eligible</h2>
+				<p>You should have answered ‘Yes’ above.</p>
+			</div>
+		</li>
+
+		<li class="footer">
+			<ul class="actions">
+				<li><strong><input type="submit" value="Primary action" /></strong></li>
+				<li><em><input type="submit" value="Primary action" /></em></li>
+				<li><input type="submit" value="Secondary action" /></li>
+				<!-- <li><input type="reset" value="Reset button" /></li> -->
+				<!-- <li><button>Button tag</button></li> -->
+				<!-- <li><a href="#foo" class="button">Button link</a></li> -->
+				<li><a href="#foo">Link action</a></li>
+			</ul>
+		</li>
+		</li>
+	</ul>
+</div>
+
+<datalist id="toolboxData">
+	<option value="Birth date" />
+	<option value="Email" />
+	<option value="Name" />
+</datalist>
+
+            </div></div></div><!-- end #asides, .box-sizing, .border -->
+
+			<div id="meta-wrapper"><div class="meta-box-sizing"><div class="border">
+
+				<div id="document-properties"><div class="box-sizing">
+					<dl>
+						<dt class="visuallyhidden">Licence</dt>
+						<dd id="document-licence">
+							<a href="http://creativecommons.org/licenses/by/3.0/au/" rel="license" title="Text available under Creative Commons Attribution 3.0 Australia (CC BY 3.0) licence"><img src="https://www.qld.gov.au/assets/v2/images/licences/by-80x15.png" alt="Creative Commons Attribution 3.0 Australia (CC BY 3.0)"/></a>
+						</dd>
+
+						<dt>Last updated</dt>
+						<dd>24 April 2014</dd>
+					</dl>
+				</div></div>
+
+<!-- noindex -->
+<div id="post-page-options" class="page-options">
+	<ul>
+		<!-- <li class="subscribe"><a href="404.html"><img alt="Subscribe" src="/assets/v2/images/skin/button-subscribe.png" /></a></li>-->
+		<li class="share">
+			<!-- <img src="/assets/v2/images/skin/button-share-share.png" alt="Share: " />-->
+			<h2>Share:</h2>
+			<a href="/share/?via=facebook&amp;title=(none)" title="Share using Facebook"><img src="https://www.qld.gov.au/assets/v2/images/skin/button-share-facebook.png" alt="Share using Facebook" /></a>
+			<a href="/share/?via=twitter&amp;title=(none)" title="Share using Twitter"><img src="https://www.qld.gov.au/assets/v2/images/skin/button-share-twitter.png" alt="Share using Twitter" /></a>
+			<a href="/share/?via=linkedin&amp;title=(none)" title="Share using LinkedIn"><img src="https://www.qld.gov.au/assets/v2/images/skin/button-share-linkedin.png" alt="Share using LinkedIn" /></a>
+			<a href="/share/?title=(none)" title="Share using another service…"><img src="https://www.qld.gov.au/assets/v2/images/skin/button-share-more.png" alt="Share using another service…" /></a>
+		</li>
+	</ul>
+</div>
+
+<div id="page-feedback">
+	<form method="post" action="https://www.qld.gov.au/assets/apps/feedback/feedback.jsp" class="form">
+
+		<h2>Page feedback</h2>
+
+		<div id="page-feedback-privacy" class="preamble">
+			<h3>Your privacy</h3>
+			<p>Information collected through this form is used to improve this website.</p>
+			<p>Any information you submit that could identify you (e.g. name, email address) will be stored securely, and destroyed after we process your feedback.</p>
+		</div>
+
+		<ol class="questions">
+			<li id="page-was-useful">
+				<fieldset>
+					<legend>
+						<span class="label">This page was</span>
+					</legend>
+					<ul class="choices compact">
+						<li>
+							<input type="radio" name="useful" id="page-was-useful-yes" value="yes" /> 
+							<label for="page-was-useful-yes">Useful</label>
+						</li>
+						<li>
+							<input type="radio" name="useful" id="page-was-useful-no" value="no" /> 
+							<label for="page-was-useful-no">Not useful</label>
+						</li>
+					</ul>
+				</fieldset>
+			</li>
+			<li class="instruction">
+				<p>We want this information to be the best it can be and we know we can’t do it without you.
+				Let us know what you thought of this page and what other information you would like to see.</p>
+				<p>We do not reply to feedback. <a href="https://www.qld.gov.au/contact-us/">Contact us if you need a response</a>.</p>
+			</li>
+
+			<li>
+				<label for="feedback-comments">
+					<span class="label">Feedback about this page</span>
+				</label>
+				<textarea name="comments" id="feedback-comments" cols="50" rows="7"></textarea>
+			</li>
+
+			<li class="section">
+				<fieldset id="feedback-contact">
+					<legend>
+						<span class="h3">Contact (optional)</span>
+					</legend>
+					<ol class="questions">
+						<li>
+							<label for="feedback-contact-input">
+								<span class="label">Please provide your <strong>phone number</strong> or <strong>email address</strong> if you are happy for us to contact you with any follow-up questions</span>
+							</label>
+							<input type="text" value="" name="contact" id="feedback-contact-input" size="48" />
+						</li>
+					</ol>
+				</fieldset>
+			</li>
+
+			<li id="feedback-captcha-container">
+				<label for="feedback-captcha">Please leave this blank (this helps us identify automatic spam)</label>
+				<input type="text" name="captcha" id="feedback-captcha" value="" />
+			</li>
+
+			<li class="footer">
+				<input type="hidden" name="franchise" id="franchise" value="(none)" />
+				<input type="hidden" name="page-title" id="page-title" value="(none)" />
+				<input type="hidden" name="page-url" value="https://www.qld.gov.au/assets/includes/global/page-options-post.html" />
+				<input type="hidden" name="page-referer" value="(none)" />
+				<ul class="actions">
+					<li><strong><input type="submit" value="Submit feedback" /></strong></li>
+				</ul>
+			</li>
+		</ol>
+	</form>
+</div>
+<!-- endnoindex -->
+			</div></div></div><!-- end #meta-wrapper, .meta-box-sizing, .border -->
+
+		</div><!-- end #content-container -->
+
+<div id="nav-section">
+	<div class="box-sizing">
+		<h2><a href="#">QGov Online tools</a></h2>
+		<ul>
+			<li><a href="form-builder.html">Form builder</a></li>
+			<li><a href="formmail-builder.html">Email form builder</a></li>
+			<li><a href="formmail-billpay-builder.html">Email form with bill payment builder</a></li>
+		</ul>
+	</div>
+</div>
+
+    </div></div><!-- end #page-container, .max-width -->
+
+<div id="footer">
+	<!-- noindex -->
+	<div id="fat-footer">
+		<div class="max-width"><div class="box-sizing">
+			<h2>Explore this site</h2>
+			<div class="section">
+				<h3><a href="/">Queensland Government</a></h3>
+				<ul>
+					<li><a href="/about/contact-government/contacts/">Government contacts</a></li>
+					<li><a href="/about/contact-government/have-your-say/">Have your say</a></li>
+					<li><a href="/about/staying-informed/">Staying informed</a></li>
+					<li><a href="/about/government-jobs/">Government jobs</a></li>
+					<li><a href="/about/how-government-works/">How government works</a></li>
+					<li><a href="http://data.qld.gov.au/">Queensland Government data</a></li>
+					<li><a href="http://publications.qld.gov.au/">Queensland Government publications</a></li>
+				</ul>
+			</div>
+			<div class="section" id="for-qldrs">
+				<h3><a href="/queenslanders/">For Queenslanders</a></h3>
+				<ul>
+					<li><a href="/transport/">Transport and motoring</a></li>
+					<li><a href="/jobs/">Employment and jobs</a></li>
+					<li><a href="/housing/">Homes and housing</a></li>
+					<li><a href="/education/">Education and training</a></li>
+					<li><a href="/community/">Community support</a></li>
+					<li><a href="/health/">Health and wellbeing</a></li>
+					<li><a href="/emergency/">Emergency services and safety</a></li>
+					<li><a href="/about/">About Queensland and its government</a></li>
+				</ul>
+				<ul>
+					<li><a href="/families/">Parents and families</a></li>
+					<li><a href="/disability/">People with disability</a></li>
+					<li><a href="/seniors/">Seniors</a></li>
+					<li><a href="/atsi/">Aboriginal and Torres Strait Islander peoples</a></li>
+					<li><a href="/youth/">Youth</a></li>
+					<li><a href="/environment/">Environment, land and water</a></li>
+					<li><a href="/law/">Your rights, crime and the law</a></li>
+					<li><a href="/recreation/">Recreation, sport and arts</a></li>
+				</ul>
+			</div>
+			<div class="section">
+				<h3><a href="http://www.business.qld.gov.au/">Business and industry</a></h3>
+				<ul>
+					<li><a href="http://www.business.qld.gov.au/getting-into-business.html">Getting into business</a></li>
+					<li><a href="http://www.business.qld.gov.au/running-a-business.html">Running a business</a></li>
+					<li><a href="http://www.business.qld.gov.au/employing-people.html">Employing people</a></li>
+					<li><a href="http://www.business.qld.gov.au/trade-and-investment.html">Trade and investment</a></li>
+					<li><a href="http://www.business.qld.gov.au/industry-sectors.html">Industry sectors</a></li>
+					<li><a href="http://www.business.qld.gov.au/regional-queensland.html">Regional Queensland</a></li>
+				</ul>
+			</div>
+		</div></div>
+	</div>
+	<div class="max-width"><div class="box-sizing">
+		<h2>Site footer</h2>
+		<ul>
+			<li id="link-help"><a href="/help/">Help</a></li>
+			<!--<li id="link-legal"><a href="/legal/">Terms and conditions</a></li>-->
+			<li class="legal"><a href="/legal/copyright/">Copyright</a></li>
+			<li class="legal"><a href="/legal/disclaimer/">Disclaimer</a></li>
+			<li class="legal"><a href="/legal/privacy/">Privacy</a></li>
+			<li class="legal"><a href="/right-to-information/">Right to information</a></li>
+			<li id="link-accessibility"><a href="/help/accessibility/">Accessibility</a></li>
+			<li id="link-jobs"><a href="https://smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
+			<li id="link-languages"><a href="/languages/">Other languages</a></li>
+		</ul>
+		<!-- endnoindex -->
+		<p class="legal">© The State of Queensland 1995–2013</p>
+		<p><a href="/" accesskey="1">Queensland Government</a></p>
+		<div id="qg-branding"><p><img class="tagline" src="https://www.qld.gov.au/assets/v2/images/skin/tagline.png" alt="Great state. Great opportunity." /></p></div>
+	</div></div>
+</div>
+
+<div id="scripts">
+<script type="text/javascript" src="https://www.qld.gov.au/assets/v2/script/loader.js"></script>
+<script type="text/javascript" src="https://www.qld.gov.au/assets/v2/script/init.js"></script>
+</div>
+
+<script type="text/javascript" src="lib/beautify-html.js"></script>
+<script type="text/javascript" src="lib/drag-and-drop.js"></script>
+<script type="text/javascript" src="form-builder.js"></script>
+
+<div id="analytics">
+	<script id="analytics-inline-config" type="text/javascript"><!--
+		qg.swe.pageTitle = "(none)";
+		qg.swe.franchiseTitle = '(none)';
+
+		qg.swe.vhost = 'PROD';
+		qg.swe.servedBy = 'PWS';
+
+	//--></script><!-- end #analytics-inline-config -->
+
+<!-- Load configuration for analytics -->
+	<script type="text/javascript" src="https://www.qld.gov.au/assets/v2/script/analytics.js"></script>
+</div><!-- end #analytics -->
+
+</body>
+</html>
