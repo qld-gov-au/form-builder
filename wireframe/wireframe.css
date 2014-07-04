@@ -6,6 +6,8 @@
 	border-width: 3px !important;
 	border-style: none; /* default, must be less specific than existing styles */
 	color: #111 !important;
+
+	transition: background .3s;
 }
 
 
@@ -103,26 +105,26 @@ body.lofi {
 	padding-left: 90px;
 }
 
-.lofi .info {
-	background-image: url(info.png);
+.lofi .status {
+	margin-left: 0;
 }
-.lofi div.alert {
-	background-image: url(alert.png);
+.lofi .status:before {
+	background: transparent;
 }
-.lofi .success {
-	background-image: url(success.png);
+.lofi .info:before {
+	content: url(info.png);
 }
-.lofi .fail {
-	background-image: url(fail.png);
+.lofi div.alert:before {
+	content: url(alert.png);
+}
+.lofi .success:before {
+	content: url(success.png);
+}
+.lofi .fail:before {
+	content: url(fail.png);
 }
 
 
-
-.lofi .questions li {
-	background: #f3f3f3;
-	/*border-color: #ccc;*/
-	border: none;
-}
 
 .lofi .group .questions li.active
 /*, .lofi .questions li.active*/ {
@@ -165,11 +167,6 @@ body.lofi {
 	background: #fff;
 }
 
-.lofi .article .box-sizing,
-.lofi #meta-wrapper .meta-box-sizing {
-	background: #111;
-	border-radius: 0;
-}
 .lofi .article .box-sizing .border {
 	margin: 2px 2px 0;
 }
@@ -211,12 +208,8 @@ body.lofi {
 }
 
 
-.lofi #qg-logo img {
-	visibility: hidden;
-}
-.lofi #qg-logo a,
-.lofi #qg-logo a:hover {
-	background: url(qg-logo.png) 50% 50% no-repeat;
+.lofi #qg-coa {
+	background: transparent;
 }
 
 
@@ -234,7 +227,6 @@ body.lofi {
 .lofi #nav-section,
 .lofi #nav-section a {
 	color: #333 !important;
-	background: #f7f7f7;
 }
 
 .lofi #page-container .max-width {
@@ -249,22 +241,8 @@ body.lofi {
 	border-bottom: 2px solid #111;
 	background: #f7f7f7;
 }
-.lofi #breadcrumbs li {
-	background-image: url(bullet.png);
-}
-
-.lofi #breadcrumbs .nav-home a {
-    background-image: url(icon-home.png);
-}
-
-.lofi #nav-section ul a {
-	
-	background-image: url(bullet.png);
-	
-}
-
-.lofi #nav-section ul li.current-page a {
-    background-image: url(bullet-current.png);
+.lofi #breadcrumbs .nav-home a:before {
+	color: #111;
 }
 
 
@@ -280,6 +258,15 @@ body.lofi {
 	background: #ddd;
 }
 
+.lofi #page-feedback {
+	display: none;
+}
+.lofi #header .box-sizing,
+.lofi #content-container,
+.lofi #page-container,
+.lofi #fat-footer {
+	background: transparent;
+}
 
 .lofi #footer {
     background: #ccc;
