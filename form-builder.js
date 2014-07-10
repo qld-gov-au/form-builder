@@ -17,6 +17,10 @@ var formBuilder = (function ( $, style_html ) {
 		});
 	}
 
+	// setup initial keyboard focus
+	$( '.questions > li' ).prop( 'tabindex', 0 );
+
+
 	var currentHtml = '';
 	var KEY = {
 		ASTERISK: 106, // * (numpad)
@@ -194,6 +198,7 @@ var formBuilder = (function ( $, style_html ) {
 				$( '#editButtons' ).slideUp();
 				$( '.constructiform', '#content' ).removeClass( 'constructiform' );
 				$( '[draggable]' ).removeAttr( 'draggable' );
+				$( '.questions > li' ).removeProp( 'tabindex' ).removeAttr( 'tabindex' );
 
 				break;
 
@@ -208,6 +213,7 @@ var formBuilder = (function ( $, style_html ) {
 				$( '#toolbox' ).slideDown();
 				$( '#editButtons' ).slideDown();
 				resetDragging( true );
+				$( '.questions > li' ).prop( 'tabindex', 0 );
 				break;
 
 			case 'export html':
@@ -531,7 +537,7 @@ var formBuilder = (function ( $, style_html ) {
 	})
 	;
 
-//  Chrome requires that the element is focused to capture key events.
+	// Chrome requires that the element is focused to capture key events.
 	$( document ).on( 'click', '.constructiform .choices > li', function ( event ) {
 		event.target.focus();
 	});
@@ -724,6 +730,7 @@ var formBuilder = (function ( $, style_html ) {
 	$( document ).on( 'submit', 'form', function () {
 		return false;
 	});
+
 
 	return {
 		config: config,
