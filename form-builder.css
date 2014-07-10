@@ -65,3 +65,8 @@ ol.questions.compact {
     display: inline-block;
     width: 100%;
 }
+
+.lofi li:focus {
+	outline: 3px dashed rgba( 0, 0, 255, .5 );
+	outline-color: rgba( 0, 0, 255, .5 ) !important;
+}
