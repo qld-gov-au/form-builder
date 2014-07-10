@@ -1,0 +1,37 @@
+/*
+ * frood
+ * https://github.com/Ben/frood
+ *
+ * Copyright (c) 2013 Ben Boyle
+ * Licensed under the MIT license.
+ */
+
+ /* drag and drop */
+[draggable]:hover {
+	box-shadow: .1em .1em .1em .1em #ccc;
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+}
+[draggable]:active {
+	/*position: relative;*/
+	background: #eee; /* inherit from form? */
+	/*top: .2em;*/
+	/*left: .2em;*/
+	box-shadow: .1em .3em .5em .3em #ccc;
+	z-index: 2;
+	cursor: -moz-grabbing;
+}
+
+/* drop targets */
+.questions > li.drop-target:not(.no-drop)::before {
+	content: 'place question here';
+	color: #ccc;
+	text-align: center;
+	outline: .2em dashed #ccc;
+	display: block;
+	height: 1em;
+	padding: 2em;
+	margin-bottom: 1em;
+	background: #fff;
+}

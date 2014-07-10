@@ -1,0 +1,375 @@
+@import url(smoothness/jquery-ui-1.8.16.custom.css);
+
+.lofi * {
+	box-shadow: none !important;
+	border-color: #333 !important;
+	border-width: 3px !important;
+	border-style: none; /* default, must be less specific than existing styles */
+	color: #111 !important;
+
+	transition: background .3s;
+}
+
+
+body.lofi {
+	background: #eee;
+	color: #111;
+	font: 130%/1.3 "Comic Sans MS", serif;
+}
+.lofi,
+.lofi input,
+.lofi select,
+.lofi textarea,
+.lofi optgroup,
+.lofi option {
+	font-family: "Comic Sans MS", serif !important;
+}
+
+
+.lofi #header-bg {
+	background: url(hatch-bg.jpg);
+}
+
+
+.lofi h1, .lofi h2, .lofi h3, .lofi h4, .lofi h5, .lofi h6,
+.lofi .h2, .lofi .h3, .lofi .h4 {
+	color: #111;
+	font-family: "Comic Sans MS" !important;
+}
+
+.lofi button,
+.lofi input,
+.lofi select,
+.lofi textarea,
+.lofi optgroup,
+.lofi option {
+	appearance: none;
+	-webkit-appearance: none; /* Turn off native browser rendering */
+}
+.lofi input,
+.lofi select,
+.lofi textarea {
+	border-style: solid;
+	border-radius: 7px !important;
+}
+.lofi input[type="checkbox"],
+.lofi input[type="radio"] {
+	width: 16px;
+	height: 16px;
+}
+.lofi input[type="checkbox"] {
+	border-radius: 2px !important;
+}
+.lofi input[type="radio"] {
+	border-radius: 100% !important;
+}
+.lofi input[type="checkbox"]:checked,
+.lofi input[type="radio"]:checked {
+	background: #333;
+}
+.lofi fieldset {
+	border: 3px solid #111 !important;
+	padding: 1em;
+	margin: 0 0 0 -1em;
+}
+.lofi legend {
+	width: auto;
+	padding: .2em;
+}
+.lofi strong input[type="submit"],
+.lofi em input[type="submit"] {
+	background: #aaa !important;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	text-shadow: none;
+}
+.lofi strong input[type="submit"] {
+	font-weight: bold;
+}
+.lofi em input[type="submit"] {
+	font-style: italic;
+}
+.lofi input[type="submit"] {
+	background: #ccc;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+
+.lofi abbr.required {
+	color: #666;
+}
+
+.lofi .status {
+	border: 3px dashed black;
+	background-color: #ddd;
+	padding-left: 90px;
+}
+
+.lofi .status {
+	margin-left: 0;
+}
+.lofi .status:before {
+	background: transparent;
+}
+.lofi .info:before {
+	content: url(info.png);
+}
+.lofi div.alert:before {
+	content: url(alert.png);
+}
+.lofi .success:before {
+	content: url(success.png);
+}
+.lofi .fail:before {
+	content: url(fail.png);
+}
+
+
+
+.lofi .group .questions li.active
+/*, .lofi .questions li.active*/ {
+	background: #e3e3e3;
+	border-color: #999;
+}
+
+.lofi table.striped {
+	border-bottom: 1px solid #ccc;
+}
+
+.lofi table caption {
+	color: #111;
+}
+
+.lofi table thead tr th,
+.lofi table thead tr td {
+	background: #bbb;
+}
+
+.lofi table tr td,
+.lofi table tr th {
+	background: #fff;
+}
+
+.lofi table tr.even td,
+.lofi table tr.even th {	
+	background: #ddd;
+}
+
+
+/* Reversal of QGov SWE template styles */
+.lofi h1 {
+	background: url(hatch-bg.jpg);
+	background: #ddd;
+	color: #111;
+}
+
+.lofi .form .box-sizing .border {
+	background: #fff;
+}
+
+.lofi .article .box-sizing .border {
+	margin: 2px 2px 0;
+}
+.lofi #meta-wrapper .meta-box-sizing .border {
+	margin: 0 2px 2px;
+}
+
+
+.lofi #header .max-width {
+	background: #efefef url(bottom-border.png) left bottom repeat-x;
+}
+
+.lofi #page-container .max-width {
+	border-bottom: 2px solid #111;
+}
+
+
+
+.lofi #header a,
+.lofi #header a:link,
+.lofi #header a:visited,
+.lofi #tools a,
+.lofi #tools a:link,
+.lofi #tools a:visited,
+.lofi #nav-site a,
+.lofi #nav-site a:link,
+.lofi #nav-site a:visited,
+.lofi #footer a,
+.lofi #footer a:link,
+.lofi #footer a:visited {
+	color: #111;
+}
+
+.lofi #header .current-area a,
+.lofi #header .current-area a:link,
+.lofi #header .current-area a:visited,
+.lofi #header .current-area a:hover {
+	background: #999;
+}
+
+
+.lofi #qg-coa {
+	background: transparent;
+}
+
+
+.lofi #search-form input {
+	padding: .2em;
+}
+.lofi #search-button {
+	display: none;
+}
+
+.lofi #nav-section ul li.current-page,
+.lofi #nav-section ul li.current-page .current {
+	background-color: #999 !important;
+}
+.lofi #nav-section,
+.lofi #nav-section a {
+	color: #333 !important;
+}
+
+.lofi #page-container .max-width {
+	background: #f7f7f7;
+}
+
+.lofi #nav-section ul li.has-submenu {
+	background: none !important;
+}
+
+.lofi #breadcrumbs {
+	border-bottom: 2px solid #111;
+	background: #f7f7f7;
+}
+.lofi #breadcrumbs .nav-home a:before {
+	color: #111;
+}
+
+
+.lofi #qg-logo a:hover,
+.lofi #qg-logo a.keyboard-focus {
+	background-color: #ddd;
+}
+.lofi #tools a:hover,
+.lofi #tools a.keyboard-focus,
+.lofi #nav-site a:hover,
+.lofi #nav-site li a.open,
+.lofi #nav-site li a.keyboard-focus {
+	background: #ddd;
+}
+
+.lofi #page-feedback {
+	display: none;
+}
+.lofi #header .box-sizing,
+.lofi #content-container,
+.lofi #page-container,
+.lofi #fat-footer {
+	background: transparent;
+}
+
+.lofi #footer {
+    background: #ccc;
+    color: #111;
+}
+
+.lofi #fat-footer .box-sizing {
+	background: #ddd;
+	border-top: 2px solid #111;
+}
+
+.lofi #footer h3 a,
+.lofi #footer h3 a:link,
+.lofi #footer h3 a:visited {
+    color: #111;
+}
+
+.lofi .aside {
+    background: #ccc;
+}
+.lofi .aside-inner {
+    background: #efefef;
+}
+
+
+.lofi .data dd {
+	background: #e6e6e6;
+	border: none;
+}
+
+.lofi #asides .contact,
+.lofi #asides .feedback {
+	background: #ddd;
+}
+
+.lofi #asides .contact li.telephone {
+	background: none;
+}
+/*
+.lofi a, .lofi a:link, .lofi a:visited, .lofi a:hover {
+	color: #111;
+}
+*/
+.lofi #nav-section ul li.current-page ol a,
+.lofi #nav-section ul li.current-page ol a:hover {
+	cursor: default;
+}
+.lofi #nav-section ul li.current-page ol li.active a {
+	cursor: pointer;
+}
+.lofi #nav-section ul li.current-page ol li.active a:hover {
+	text-decoration: underline;
+}
+.lofi #nav-section ul li.current-page ol li.future a {
+	color: #111;
+	cursor: default;
+}
+
+
+.lofi #toc a .page-number,
+.lofi #process a .page-number,
+.lofi #nav-section a .page-number,
+.lofi #toc li.current a .page-number,
+.lofi #process li.current a .page-number,
+.lofi #nav-section li.current a .page-number {
+	border-color: #bbb;
+	color: #111;
+	background: #fff;
+}
+
+.lofi #toc a:hover .page-number,
+.lofi #process li.active a:hover .page-number,
+.lofi #nav-section li.active a:hover .page-number {
+	background-color: #ddd;
+}
+
+.lofi #post-page-options {
+	display: none;
+}
+
+
+/* show hidden stuff */
+.lofi [hidden] {
+	display: block !important;
+	outline: 3px dashed #777;
+}
+.lofi [hidden] * {
+	color: #777 !important;
+	border-color: #777 !important;
+}
+
+
+/* current page marker */
+.lofi .current-page:before,
+.lofi .current-page:after {
+	border-left-color: #999;
+}
+
+
+/* drag and drop */
+.lofi [draggable]:hover {
+	outline: 3px dashed rgba( 0, 0, 0, .2 );
+}
+.lofi [draggable]:active {
+	outline: 3px dashed rgba( 0, 0, 0, .5 );
+}
