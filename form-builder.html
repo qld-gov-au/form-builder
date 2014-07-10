@@ -7,30 +7,30 @@
 
 <!--#set var="franchise" value="toolbox"-->
 <!--#set var="title" value="Form builder"-->
-	<link rel="stylesheet" type="text/css" href="https://static.qgov.net.au/assets/v2//style/qgov.css" media="all" />
-	<!--[if lt IE 9]><link rel="stylesheet" href="/assets/v2/style/qgov-ie.css" type="text/css" media="all" /><![endif]-->
+	<link rel="stylesheet" type="text/css" href="https://static.qgov.net.au/assets/v2/style/qgov.css" media="all" />
+	<!--[if lt IE 9]><link rel="stylesheet" href="https://static.qgov.net.au/assets/v2/style/qgov-ie.css" type="text/css" media="all" /><![endif]-->
 	
 	<!-- layout-small is assumed by default (combined with qgov.css) -->
-	<link href="https://static.qgov.net.au/assets/v2//style/layout-medium.css" media="only all and (min-width: 640px) and (max-width: 980px)" rel="stylesheet" type="text/css" />
-	<link href="https://static.qgov.net.au/assets/v2//style/layout-large.css" media="only all and (min-width: 980px)" rel="stylesheet" type="text/css" />
+	<link href="https://static.qgov.net.au/assets/v2/style/layout-medium.css" media="only all and (min-width: 640px) and (max-width: 980px)" rel="stylesheet" type="text/css" />
+	<link href="https://static.qgov.net.au/assets/v2/style/layout-large.css" media="only all and (min-width: 980px)" rel="stylesheet" type="text/css" />
     
 	<meta name="viewport" content="width=device-width" />
 	
 	
-	<link rel="shortcut icon" href="https://static.qgov.net.au/assets/v2//images/skin/favicon.ico" />
+	<link rel="shortcut icon" href="https://static.qgov.net.au/assets/v2/images/skin/favicon.ico" />
 
 	<!-- Grab Google CDN's jQuery. Fall back to local copy if necessary --> 
 	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> 
 	<script type="text/javascript"><!-- //
 		!window.jQuery && document.write(unescape('%3Cscript src="/assets/v2/script/jquery-1.7.2.min.js"%3E%3C/script%3E'));
 	// --></script>
-    <script type="text/javascript" src="https://static.qgov.net.au/assets/v2//script/qgov-environment.js" id="qgov-environment"></script>
+    <script type="text/javascript" src="https://static.qgov.net.au/assets/v2/script/qgov-environment.js" id="qgov-environment"></script>
 	<!--[if lt IE 9]>
 	<script type="text/javascript">document.createElement('abbr');document.createElement('time');</script>
 	<script type="text/javascript" src="/assets/v2/script/ie-layout.js"></script>
 	<![endif]-->
 
-	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://static.qgov.net.au/assets/v2//images/skin/qg-coa-ogp.png" />
+	<meta prefix="og: http://ogp.me/ns#" property="og:image" content="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-ogp.png" />
 
 
 	<link type="text/css" rel="stylesheet" href="form-builder.css" />
@@ -46,7 +46,7 @@
 	<meta name="DCTERMS.creator" scheme="AGLSTERMS.GOLD" content="c=AU; o=The State of Queensland; ou=Department of Public Works; ou=Smart Service Queensland" />
 	<meta name="DCTERMS.publisher" scheme="AGLSTERMS.AglsAgent" content="corporateName=The State of Queensland; jurisdiction=Queensland" />
 	<meta name="DCTERMS.created" content="2010-11-04" />
-	<meta name="DCTERMS.modified" content="2014-07-04" />
+	<meta name="DCTERMS.modified" content="2014-07-10" />
 	<meta name="DCTERMS.title" content="Form builder | QGov Online tools" />
 	<meta name="DCTERMS.description" content="A tool for mocking up forms" />
     <meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content="https://www.qld.gov.au/assets/includes/global/head-meta-identifier.html" />
@@ -75,9 +75,10 @@
 		<h2>Site header</h2>
 
 		<div id="qg-coa"><a href="https://www.qld.gov.au/">
-			<!--[if gte IE 7]><!--><img src="https://static.qgov.net.au/assets/v2//images/skin/qg-coa.png" width="287" height="50" alt="Queensland Government home" /><!--<![endif]-->
-			<!--[if lte IE 6]><img src="https://static.qgov.net.au/assets/v2//images/skin/qg-coa-ie6.png" width="287" height="50" alt="Queensland Government home" /><![endif]-->
-			<img src="https://static.qgov.net.au/assets/v2//images/skin/qg-coa-print.png" class="print-version" alt="" />
+			<!--[if gt IE 8]><!--><img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa.svg" width="287" height="50" alt="Queensland Government home" /><!--<![endif]-->
+			<!--[if (lte IE 8)&(gt IE 6)]><img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa.png" width="287" height="50" alt="Queensland Government home" /><![endif]-->
+			<!--[if lte IE 6]><img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-ie6.png" width="287" height="50" alt="Queensland Government home" /><![endif]-->
+			<img src="https://static.qgov.net.au/assets/v2/images/skin/qg-coa-print.png" class="print-version" alt="" />
 		</a></div>
 
 		<ul id="tools">
@@ -87,7 +88,7 @@
 					<div>
 						<label for="search-query" class="visuallyhidden">Search website</label>
 						<input accesskey="5" type="search" name="query" id="search-query" size="27" value="" placeholder="Search website" />
-						<input id="search-button" type="image" src="https://static.qgov.net.au/assets/v2//images/skin/button-search.png" value="Search" />
+						<button id="search-button">Search</button>
 						<input type="hidden" name="num_ranks" value="10" />
 						<input type="hidden" name="tiers" value="off" />
 						<input type="hidden" name="collection" value="qld-gov" />
@@ -104,9 +105,6 @@
 			<li class="nav-business">
 				<a href="http://www.business.qld.gov.au/">Business and industry</a>
 			</li>
-			<!--<li class="nav-non-residents">
-				<a href="https://www.qld.gov.au/non-residents/">For non-residents</a>
-			</li>-->
 		</ul></div>
 
 	</div></div></div></div>
@@ -117,8 +115,7 @@
 		<div id="breadcrumbs">
 			<h2>You are here:</h2>
 			<ol>
-<li class="nav-home"><a href="https://www.qld.gov.au/">Queensland Government home</a></li>
-
+				<li class="nav-home"><a href="https://www.qld.gov.au/">Queensland Government home</a></li>
 				<li><a href="/">QGov Online tools</a></li>
 				<li class="last-child">Form builder</li>
 			</ol>
@@ -675,25 +672,23 @@
 					<dl>
 						<dt class="visuallyhidden">Licence</dt>
 						<dd id="document-licence">
-							<a href="http://creativecommons.org/licenses/by/3.0/au/" rel="license" title="Text available under Creative Commons Attribution 3.0 Australia (CC BY 3.0) licence"><img src="https://static.qgov.net.au/assets/v2//images/licences/by-80x15.png" alt="Creative Commons Attribution 3.0 Australia (CC BY 3.0)"/></a>
+							<a href="http://creativecommons.org/licenses/by/3.0/au/" rel="license" title="Text available under Creative Commons Attribution 3.0 Australia (CC BY 3.0) licence"><img src="https://static.qgov.net.au/assets/v2/images/licences/by-80x15.png" alt="Creative Commons Attribution 3.0 Australia (CC BY 3.0)"/></a>
 						</dd>
 
 						<dt>Last updated</dt>
-						<dd>4 July 2014</dd>
+						<dd>10 July 2014</dd>
 					</dl>
 				</div></div>
 
 <!-- noindex -->
 <div id="post-page-options" class="page-options">
 	<ul>
-		<!-- <li class="subscribe"><a href="404.html"><img alt="Subscribe" src="/assets/v2/images/skin/button-subscribe.png" /></a></li>-->
 		<li class="share">
-			<!-- <img src="/assets/v2/images/skin/button-share-share.png" alt="Share: " />-->
 			<h2>Share:</h2>
-			<a href="/share/?via=facebook&amp;title=(none)" title="Share using Facebook"><img src="https://static.qgov.net.au/assets/v2//images/skin/button-share-facebook.png" alt="Share using Facebook" /></a>
-			<a href="/share/?via=twitter&amp;title=(none)" title="Share using Twitter"><img src="https://static.qgov.net.au/assets/v2//images/skin/button-share-twitter.png" alt="Share using Twitter" /></a>
-			<a href="/share/?via=linkedin&amp;title=(none)" title="Share using LinkedIn"><img src="https://static.qgov.net.au/assets/v2//images/skin/button-share-linkedin.png" alt="Share using LinkedIn" /></a>
-			<a href="/share/?title=(none)" title="Share using another service…"><img src="https://static.qgov.net.au/assets/v2//images/skin/button-share-more.png" alt="Share using another service…" /></a>
+			<a class="facebook" href="https://www.qld.gov.au/share/?via=facebook&amp;title=Example%20page" title="Share using Facebook"><span>Facebook</span></a>
+			<a class="twitter" href="https://www.qld.gov.au/share/?via=twitter&amp;title=Example%20page" title="Share using Twitter"><span>Twitter</span></a>
+			<a class="linkedin" href="https://www.qld.gov.au/share/?via=linkedin&amp;title=Example%20page" title="Share using LinkedIn"><span>LinkedIn</span></a>
+			<a class="share" href="https://www.qld.gov.au/share/?title=Example%20page" title="Share using another service…"><span>More</span></a>
 		</li>
 	</ul>
 </div>
@@ -717,11 +712,11 @@
 					</legend>
 					<ul class="choices compact">
 						<li>
-							<input type="radio" name="useful" id="page-was-useful-yes" value="yes" /> 
+							<input type="radio" name="useful" id="page-was-useful-yes" value="yes" />
 							<label for="page-was-useful-yes">Useful</label>
 						</li>
 						<li>
-							<input type="radio" name="useful" id="page-was-useful-no" value="no" /> 
+							<input type="radio" name="useful" id="page-was-useful-no" value="no" />
 							<label for="page-was-useful-no">Not useful</label>
 						</li>
 					</ul>
@@ -750,7 +745,7 @@
 							<label for="feedback-contact-input">
 								<span class="label">Please provide your <strong>phone number</strong> or <strong>email address</strong> if you are happy for us to contact you with any follow-up questions</span>
 							</label>
-							<input type="text" value="" name="contact" id="feedback-contact-input" size="48" />
+							<input type="text" value="" name="contact" id="feedback-contact-input" size="40" />
 						</li>
 					</ol>
 				</fieldset>
@@ -762,10 +757,10 @@
 			</li>
 
 			<li class="footer">
-				<input type="hidden" name="franchise" id="franchise" value="(none)" />
-				<input type="hidden" name="page-title" id="page-title" value="(none)" />
-				<input type="hidden" name="page-url" value="https://www.qld.gov.au/assets/includes/global/page-options-post.html" />
-				<input type="hidden" name="page-referer" value="(none)" />
+				<input type="hidden" name="franchise" id="franchise" value="" />
+				<input type="hidden" name="page-title" id="page-title" value="Form builder" />
+				<input type="hidden" name="page-url" value="" />
+				<input type="hidden" name="page-referer" value="" />
 				<ul class="actions">
 					<li><strong><input type="submit" value="Submit feedback" /></strong></li>
 				</ul>
@@ -783,8 +778,6 @@
 		<h2><a href="#">QGov Online tools</a></h2>
 		<ul>
 			<li><a href="form-builder.html">Form builder</a></li>
-			<li><a href="formmail-builder.html">Email form builder</a></li>
-			<li><a href="formmail-billpay-builder.html">Email form with bill payment builder</a></li>
 		</ul>
 	</div>
 </div>
@@ -797,49 +790,53 @@
 		<div class="max-width"><div class="box-sizing">
 			<h2>Explore this site</h2>
 			<div class="section">
-				<h3><a href="/">Queensland Government</a></h3>
+				<h3><a href="https://www.qld.gov.au/">Queensland Government</a></h3>
 				<ul>
-					<li><a href="/about/contact-government/contacts/">Government contacts</a></li>
-					<li><a href="/about/contact-government/have-your-say/">Have your say</a></li>
-					<li><a href="/about/staying-informed/">Staying informed</a></li>
-					<li><a href="/about/government-jobs/">Government jobs</a></li>
-					<li><a href="/about/how-government-works/">How government works</a></li>
-					<li><a href="http://data.qld.gov.au/">Queensland Government data</a></li>
-					<li><a href="http://publications.qld.gov.au/">Queensland Government publications</a></li>
+					<li><a href="https://www.qld.gov.au/about/contact-government/contacts/">Government contacts</a></li>
+					<li><a href="https://www.qld.gov.au/about/contact-government/have-your-say/">Have your say</a></li>
+					<li><a href="https://www.qld.gov.au/about/staying-informed/">Staying informed</a></li>
+					<li><a href="https://www.qld.gov.au/about/government-jobs/">Government jobs</a></li>
+					<li><a href="https://www.qld.gov.au/about/how-government-works/">How government works</a></li>
+					<li><a href="https://data.qld.gov.au/">Queensland Government data</a></li>
+					<li><a href="https://publications.qld.gov.au/">Queensland Government publications</a></li>
 				</ul>
 			</div>
 			<div class="section" id="for-qldrs">
-				<h3><a href="/queenslanders/">For Queenslanders</a></h3>
+				<h3><a href="https://www.qld.gov.au/queenslanders/">For Queenslanders</a></h3>
 				<ul>
-					<li><a href="/transport/">Transport and motoring</a></li>
-					<li><a href="/jobs/">Employment and jobs</a></li>
-					<li><a href="/housing/">Homes and housing</a></li>
-					<li><a href="/education/">Education and training</a></li>
-					<li><a href="/community/">Community support</a></li>
-					<li><a href="/health/">Health and wellbeing</a></li>
-					<li><a href="/emergency/">Emergency services and safety</a></li>
-					<li><a href="/about/">About Queensland and its government</a></li>
+					<li><a href="https://www.qld.gov.au/transport/">Transport and motoring</a></li>
+					<li><a href="https://www.qld.gov.au/jobs/">Employment and jobs</a></li>
+					<li><a href="https://www.qld.gov.au/housing/">Homes and housing</a></li>
+					<li><a href="https://www.qld.gov.au/education/">Education and training</a></li>
+					<li><a href="https://www.qld.gov.au/community/">Community support</a></li>
+					<li><a href="https://www.qld.gov.au/health/">Health and wellbeing</a></li>
+					<li><a href="https://www.qld.gov.au/emergency/">Emergency services and safety</a></li>
+					<li><a href="https://www.qld.gov.au/about/">About Queensland and its government</a></li>
 				</ul>
 				<ul>
-					<li><a href="/families/">Parents and families</a></li>
-					<li><a href="/disability/">People with disability</a></li>
-					<li><a href="/seniors/">Seniors</a></li>
-					<li><a href="/atsi/">Aboriginal and Torres Strait Islander peoples</a></li>
-					<li><a href="/youth/">Youth</a></li>
-					<li><a href="/environment/">Environment, land and water</a></li>
-					<li><a href="/law/">Your rights, crime and the law</a></li>
-					<li><a href="/recreation/">Recreation, sport and arts</a></li>
+					<li><a href="https://www.qld.gov.au/families/">Parents and families</a></li>
+					<li><a href="https://www.qld.gov.au/disability/">People with disability</a></li>
+					<li><a href="https://www.qld.gov.au/seniors/">Seniors</a></li>
+					<li><a href="https://www.qld.gov.au/atsi/">Aboriginal and Torres Strait Islander peoples</a></li>
+					<li><a href="https://www.qld.gov.au/youth/">Youth</a></li>
+					<li><a href="https://www.qld.gov.au/environment/">Environment, land and water</a></li>
+					<li><a href="https://www.qld.gov.au/law/">Your rights, crime and the law</a></li>
+					<li><a href="https://www.qld.gov.au/recreation/">Recreation, sport and arts</a></li>
 				</ul>
 			</div>
 			<div class="section">
 				<h3><a href="http://www.business.qld.gov.au/">Business and industry</a></h3>
 				<ul>
-					<li><a href="http://www.business.qld.gov.au/getting-into-business.html">Getting into business</a></li>
-					<li><a href="http://www.business.qld.gov.au/running-a-business.html">Running a business</a></li>
-					<li><a href="http://www.business.qld.gov.au/employing-people.html">Employing people</a></li>
-					<li><a href="http://www.business.qld.gov.au/trade-and-investment.html">Trade and investment</a></li>
-					<li><a href="http://www.business.qld.gov.au/industry-sectors.html">Industry sectors</a></li>
-					<li><a href="http://www.business.qld.gov.au/regional-queensland.html">Regional Queensland</a></li>
+					<li><a href="http://www.business.qld.gov.au/business/starting">Starting a business</a></li>
+					<li><a href="http://www.business.qld.gov.au/business/running">Running a business</a></li>
+					<li><a href="http://www.business.qld.gov.au/business/employing">Employing people</a></li>
+					<li><a href="http://www.business.qld.gov.au/invest">Investing in Queensland</a></li>
+					<li><a href="http://www.business.qld.gov.au/industry">For industry</a></li>
+					<li><a href="http://www.business.qld.gov.au/invest/queenslands-regional-locations">Regional investment opportunities</a></li>
+					<li><a href="http://www.business.qld.gov.au/chinese" lang="zh">昆士兰州的投资机会</a></li>
+					<li><a href="http://www.business.qld.gov.au/chinese-t" lang="zh">昆士蘭州的投資機會</a></li>
+					<li><a href="http://www.business.qld.gov.au/japanese" lang="ja">クイーンズランド州への投資機会</a></li>
+					<li><a href="http://www.business.qld.gov.au/korean" lang="ko">퀸즈랜드 투자 기회</a></li>
 				</ul>
 			</div>
 		</div></div>
@@ -847,26 +844,26 @@
 	<div class="max-width"><div class="box-sizing">
 		<h2>Site footer</h2>
 		<ul>
-			<li id="link-help"><a href="/help/">Help</a></li>
-			<!--<li id="link-legal"><a href="/legal/">Terms and conditions</a></li>-->
-			<li class="legal"><a href="/legal/copyright/">Copyright</a></li>
-			<li class="legal"><a href="/legal/disclaimer/">Disclaimer</a></li>
-			<li class="legal"><a href="/legal/privacy/">Privacy</a></li>
-			<li class="legal"><a href="/right-to-information/">Right to information</a></li>
-			<li id="link-accessibility"><a href="/help/accessibility/">Accessibility</a></li>
+			<li id="link-help"><a href="https://www.qld.gov.au/help/">Help</a></li>
+			<!--<li id="link-legal"><a href="https://www.qld.gov.au/legal/">Terms and conditions</a></li>-->
+			<li class="legal"><a href="https://www.qld.gov.au/legal/copyright/">Copyright</a></li>
+			<li class="legal"><a href="https://www.qld.gov.au/legal/disclaimer/">Disclaimer</a></li>
+			<li class="legal"><a href="https://www.qld.gov.au/legal/privacy/">Privacy</a></li>
+			<li class="legal"><a href="https://www.qld.gov.au/right-to-information/">Right to information</a></li>
+			<li id="link-accessibility"><a href="https://www.qld.gov.au/help/accessibility/">Accessibility</a></li>
 			<li id="link-jobs"><a href="https://smartjobs.qld.gov.au/">Jobs in Queensland Government</a></li>
-			<li id="link-languages"><a href="/languages/">Other languages</a></li>
+			<li id="link-languages"><a href="https://www.qld.gov.au/languages/">Other languages</a></li>
 		</ul>
 		<!-- endnoindex -->
-		<p class="legal">© The State of Queensland 1995–2013</p>
-		<p><a href="/" accesskey="1">Queensland Government</a></p>
-		<div id="qg-branding"><p><img class="tagline" src="https://static.qgov.net.au/assets/v2//images/skin/tagline.png" alt="Great state. Great opportunity." /></p></div>
+		<p class="legal">© The State of Queensland 1995–2014</p>
+		<p><a href="https://www.qld.gov.au/" accesskey="1">Queensland Government</a></p>
+		<div id="qg-branding"><p><img class="tagline" src="https://static.qgov.net.au/assets/v2/images/skin/tagline.png" alt="Great state. Great opportunity." /></p></div>
 	</div></div>
 </div>
 
 <div id="scripts">
-<script type="text/javascript" src="https://static.qgov.net.au/assets/v2//script/loader.js"></script>
-<script type="text/javascript" src="https://static.qgov.net.au/assets/v2//script/init.js"></script>
+<script type="text/javascript" src="https://static.qgov.net.au/assets/v2/script/loader.js"></script>
+<script type="text/javascript" src="https://static.qgov.net.au/assets/v2/script/init.js"></script>
 </div>
 
 <script type="text/javascript" src="lib/beautify-html.js"></script>
@@ -878,13 +875,13 @@
 		qg.swe.pageTitle = "(none)";
 		qg.swe.franchiseTitle = '(none)';
 
-		qg.swe.vhost = 'PROD';
-		qg.swe.servedBy = 'PWS';
+		qg.swe.vhost = window.location.hostname;
+		qg.swe.servedBy = '';
 
 	//--></script><!-- end #analytics-inline-config -->
 
 <!-- Load configuration for analytics -->
-	<script type="text/javascript" src="https://static.qgov.net.au/assets/v2//script/analytics.js"></script>
+	<script type="text/javascript" src="https://static.qgov.net.au/assets/v2/script/analytics.js"></script>
 </div><!-- end #analytics -->
 
 </body>
